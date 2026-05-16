@@ -1,0 +1,18 @@
+vocabulary: sanofi
+description: Vocabulary for Sanofi's pharmaceutical and vaccines operations
+terms:
+  - term: Dupixent
+    definition: Sanofi/Regeneron's IL-4/IL-13 monoclonal antibody for atopic and inflammatory diseases
+  - term: Sarclisa
+    definition: Sanofi's anti-CD38 monoclonal antibody for multiple myeloma
+  - term: Beyfortus
+    definition: Sanofi-AstraZeneca RSV monoclonal antibody for infants
+  - term: Vaccine Franchise
+    definition: Sanofi's portfolio of influenza, pediatric, and other vaccines
+  - term: Rare Disease
+    definition: Sanofi specialty care division covering low-prevalence indications
+dimensions:
+  - name: therapeutic-area
+    values: [Immunology, Oncology, RareDisease, Vaccines, Diabetes, Neurology]
+  - name: stage
+    values: [Preclinical, Phase1, Phase2, Phase3, Marketed]
