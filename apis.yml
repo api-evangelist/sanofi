@@ -20,6 +20,8 @@ modified: '2026-05-16'
 specificationVersion: '0.19'
 apis: []
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/sanofi
   - type: Website
     url: https://www.sanofi.com/
   - type: GitHubOrg
