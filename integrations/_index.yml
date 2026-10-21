@@ -32,3 +32,73 @@
     identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
   status: not-a-workflow
   arazzo: null
+- slug: sanofi-fda-drugs-fda-approved-drug-and-biologic-applications
+  label: FDA Drugs@FDA (approved drug and biologic applications)
+  partner_name: FDA Drugs@FDA (approved drug and biologic applications)
+  category: FDA drug / biologic application holder
+  type: contract
+  channel: regulator-register
+  evidence: https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm?event=overview.process&ApplNo=214429
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: Drugs@FDA (openFDA drug/drugsfda; application holder = sponsor_name)
+    standard: FDA drug / biologic marketing application (21 CFR 314 / 601)
+    spec_file: null
+    role: fda-application-holder
+    registered_name: SANOFI
+    matched_domain: sanofi.com
+    matched_by: domain
+    certified_products:
+    - product: New Drug Application (approved) (Drugs@FDA)
+      product_type: NDA
+      lapsed: false
+      products_sample:
+      - FEXINIDAZOLE
+      - FLOMAX
+      - HECTOROL
+      - RENVELA
+    applications_sample:
+    - NDA214429
+    signal_note: certified_products = one entry per application TYPE (NDA / ANDA / BLA), never per application;
+      lapsed when every product under the type is Discontinued. Applications are context, never counted
+    detected_by: sweep-clinical-trial-sponsors.py
+    detected: '2026-10-21'
+    identity: wikidata Q158205 'Sanofi' P856 https://www.sanofi.com/
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  status: not-a-workflow
+  arazzo: null
+- slug: sanofi-clinicaltrials-gov-industry-trial-sponsors-and-collaborators
+  label: ClinicalTrials.gov (industry trial sponsors and collaborators)
+  partner_name: ClinicalTrials.gov (industry trial sponsors and collaborators)
+  category: Interventional trial sponsor / collaborator
+  type: register
+  channel: standard-directory
+  evidence: https://clinicaltrials.gov/study/NCT07600151
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: ClinicalTrials.gov API v2 (interventional, started >= 2021-01-01, industry lead sponsor or collaborator)
+    standard: null
+    spec_file: null
+    role: trial-collaborator+lead-sponsor
+    registered_name: Sanofi
+    matched_domain: sanofi.com
+    matched_by: domain
+    lead_sponsor: true
+    active_trial: true
+    latest_start: '2026-12-01'
+    trials_sample:
+    - NCT07600151
+    - NCT07643025
+    - NCT07756957
+    - NCT07812116
+    - NCT07853131
+    signal_note: 'PARTICIPATION only (a trial is not an approval): lead_sponsor, active_trial and latest_start are
+      per-edge signals; the number of trials is never counted'
+    detected_by: sweep-clinical-trial-sponsors.py
+    detected: '2026-10-21'
+    identity: wikidata Q158205 'Sanofi' P856 https://www.sanofi.com/
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  status: not-a-workflow
+  arazzo: null
