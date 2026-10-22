@@ -129,3 +129,62 @@
     detected: '2026-10-22'
   status: not-a-workflow
   arazzo: null
+- slug: sanofi-ema-eu-centrally-authorised-medicines
+  label: EMA (EU centrally authorised medicines)
+  partner_name: EMA (EU centrally authorised medicines)
+  category: EU centrally authorised medicine
+  type: contract
+  channel: regulator-register
+  evidence: https://www.ema.europa.eu/en/medicines/human/EPAR/aldurazyme
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: EMA medicines report (centrally authorised medicines; CHMP / CVMP opinion, EC decision)
+    standard: EU centralised marketing authorisation (Regulation (EC) 726/2004)
+    role: eu-marketing-authorisation-holder
+    categories:
+    - Human
+    statuses:
+    - Application withdrawn
+    - Authorised
+    - Withdrawn
+    spec_file: null
+    registered_name: Sanofi B.V.
+    matched_domain: null
+    matched_by: register-name
+    current_authorisation: true
+    signal_note: certified_products = one entry per product TYPE, never per product, only from products granted
+      an MA; lapsed when every granted product of the type is withdrawn / expired / revoked / lapsed. Advanced-therapy
+      rows are read by cell-gene-therapy and not repeated here. Products are context, never counted
+    detected_by: sweep-eu-ema-medicines.py
+    detected: '2026-10-22'
+    certified_products:
+    - product: human medicine (other) (EU centralised marketing authorisation)
+      product_type: human medicine (other)
+      standard: EU centralised marketing authorisation (Regulation (EC) 726/2004)
+      lapsed: false
+      products_sample:
+      - Acomplia (rimonabant)
+      - Aldurazyme (laronidase)
+      - Cerezyme (imiglucerase)
+      - Evoltra (clofarabine)
+      - Fabrazyme (agalsidase beta)
+      - Mozobil (plerixafor)
+    - product: orphan medicine (EU centralised marketing authorisation)
+      product_type: orphan medicine
+      standard: EU centralised marketing authorisation (Regulation (EC) 726/2004)
+      lapsed: false
+      products_sample:
+      - Cerdelga (eliglustat)
+      - Wayrilz (rilzabrutinib)
+      - Xenpozyme (olipudase alfa)
+    register_name_note: register-name 'sanofi' = sanofi; no wikidata P856
+    other_registrations:
+    - Sanofi Aventis
+    - Sanofi-Aventis
+    - sanofi-aventis
+    identity_source: register-name
+    identity_note: register gave only the name; exact normalised match to the repo's apis.yml name, one repo, Wikidata
+      P856 not contradicting (Kin 2026-10-20 decision 2)
+  status: not-a-workflow
+  arazzo: null
